@@ -13,7 +13,7 @@ namespace ProjectManagementAPI.Tests.Controllers
     public class ProjectControllerTest: ApiController
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestProjectById()
         {
             ProjectsController proj = new ProjectsController();
             var projMoq = new Mock<IProjects>();
@@ -24,10 +24,12 @@ namespace ProjectManagementAPI.Tests.Controllers
                 EndDate = DateTime.Now.AddDays(30),
                 IsCompleted = false
             };
-            //int projId = 2;
+           // int projId = 2;
             projMoq.Setup(x => x.Get(It.IsAny<int>())).Returns(Ok(testProj));
-             var result = projMoq.Object.Get(2);
+            var result = projMoq.Object.Get(2);
+
             var chk = result as OkNegotiatedContentResult<ProjectDetails>;
+            Assert.AreEqual("TestProj", chk.Content.ProjectName);
         }
     }
 }

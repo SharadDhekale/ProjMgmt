@@ -9,6 +9,7 @@ namespace ProjectManagementAPI.Controllers
     public class ProjectsController : ApiController, IProjects
     {
         ProjectManagerDBEntities _dbContex = new ProjectManagerDBEntities();
+        [ActionName("GetProjectList")]
         public IHttpActionResult Get()
         {
             var projectDetails = (from p in _dbContex.Projects
@@ -39,6 +40,7 @@ namespace ProjectManagementAPI.Controllers
             return user?.FirstName + " " + user?.LastName;
         }
         // GET api/values/5
+        [ActionName("GetProject")]
         public IHttpActionResult Get(int id)
         {
             var filterProject = _dbContex.Projects
@@ -62,6 +64,7 @@ namespace ProjectManagementAPI.Controllers
             }
             return NotFound();
         }
+        [ActionName("AddProject")]
         public IHttpActionResult Post([FromBody]Entities.Project proj)
         {
             try
@@ -106,6 +109,7 @@ namespace ProjectManagementAPI.Controllers
             return _dbContex.Projects.Any(p => p.ProjectName.ToLower().Equals(proj.ProjectName.ToLower()));
         }
         // PUT: api/Project/5
+        [ActionName("UpdateProject")]
         public IHttpActionResult Put(int id, [FromBody]Entities.Project proj)
         {
             try
@@ -145,6 +149,7 @@ namespace ProjectManagementAPI.Controllers
         }
 
         // DELETE: api/Project/5
+        [ActionName("DeleteProject")]
         public IHttpActionResult Delete(int id)
         {
             try

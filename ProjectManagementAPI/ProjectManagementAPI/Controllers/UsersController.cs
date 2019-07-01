@@ -13,6 +13,7 @@ namespace ProjectManagementAPI.Controllers
         ProjectManagerDBEntities _dbContex = new ProjectManagerDBEntities();
 
         // GET: api/Users
+        [ActionName("GetUserList")]
         public IHttpActionResult Get()
         {
             var userList = _dbContex.Users
@@ -22,8 +23,8 @@ namespace ProjectManagementAPI.Controllers
                                         EmployeeId = u.EmployeeId,
                                         FirstName = u.FirstName,
                                         LastName = u.LastName,
-                                        ProjectId = u.ProjectId,
-                                        TaskId = u.TaskId
+                                        //ProjectId = u.ProjectId,
+                                        //TaskId = u.TaskId
                                     });
             if (userList != null)
             {
@@ -34,18 +35,19 @@ namespace ProjectManagementAPI.Controllers
         }
 
         // GET: api/Users/5
-        public IHttpActionResult Get(int id)
+        [ActionName("GetUser")]
+        public IHttpActionResult Get(string Name)
         {
             var filteredUser = _dbContex.Users
-                                        .Where(u => u.UserId == id)
+                                        .Where(u => u.FirstName.ToLower().Contains(Name.ToLower()))
                                          .Select(u => new Entities.User()
                                          {
                                              UserId = u.UserId,
                                              EmployeeId = u.EmployeeId,
                                              FirstName = u.FirstName,
                                              LastName = u.LastName,
-                                             ProjectId = u.ProjectId,
-                                             TaskId = u.TaskId
+                                             //ProjectId = u.ProjectId,
+                                             //TaskId = u.TaskId
 
                                          }).FirstOrDefault();
             if (filteredUser != null)
@@ -56,6 +58,7 @@ namespace ProjectManagementAPI.Controllers
         }
 
         // POST: api/Users
+        [ActionName("AddUser")]
         public IHttpActionResult Post([FromBody]Entities.User user)
         {
             try
@@ -65,8 +68,8 @@ namespace ProjectManagementAPI.Controllers
                     FirstName = user.FirstName,
                     LastName = user.LastName,
                     EmployeeId = user.EmployeeId,
-                    ProjectId = user.ProjectId,
-                    TaskId = user.TaskId
+                    //ProjectId = user.ProjectId,
+                    //TaskId = user.TaskId
                 };
                 if (!CheckUserAlreadyExist(user)) // Check User already exist
                 {
@@ -91,9 +94,11 @@ namespace ProjectManagementAPI.Controllers
             return _dbContex.Users.Any(u => u.FirstName.ToLower().Equals(user.FirstName.ToLower())
                                     && u.LastName.ToLower().Equals(user.LastName.ToLower())
                                     && u.EmployeeId.ToLower().Equals(user.EmployeeId.ToLower())
-                                    && u.ProjectId == user.ProjectId);
+                                    //&& u.ProjectId == user.ProjectId
+                                    );
         }
         // PUT: api/Users/5
+        [ActionName("UpdateUser")]
         public IHttpActionResult Put(int id, [FromBody]Entities.User user)
         {
             try
@@ -105,8 +110,8 @@ namespace ProjectManagementAPI.Controllers
                     filter.FirstName = user.FirstName;
                     filter.LastName = user.LastName;
                     filter.EmployeeId = user.EmployeeId;
-                    filter.ProjectId = user.ProjectId;
-                    filter.TaskId = user.TaskId;
+                    //filter.ProjectId = user.ProjectId;
+                    //filter.TaskId = user.TaskId;
                     _dbContex.SaveChanges();
 
                     return Ok();
@@ -126,6 +131,7 @@ namespace ProjectManagementAPI.Controllers
         }
 
         // DELETE: api/Users/5
+        [ActionName("DeleteUser")]
         public IHttpActionResult Delete(int id)
         {
             try
