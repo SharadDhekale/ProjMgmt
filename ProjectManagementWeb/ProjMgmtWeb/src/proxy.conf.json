@@ -1,0 +1,10 @@
+{
+    "/Put": {
+      "target": "http://localhost:2385/",
+      "secure": true,
+      "pathRewrite": {
+      "^/put": ""
+    },
+      "changeOrigin": true
+    }
+  }
