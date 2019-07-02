@@ -154,3 +154,4 @@ C:\Users\Administrator\Documents\Assignments\Final Assignment\ProjectManagementA
 C:\Users\Administrator\Documents\Assignments\Final Assignment\ProjectManagementAPI\ProjectManagementAPI\bin\Microsoft.AI.Web.xml
 C:\Users\Administrator\Documents\Assignments\Final Assignment\ProjectManagementAPI\ProjectManagementAPI\obj\Debug\ProjectManagementAPI.dll
 C:\Users\Administrator\Documents\Assignments\Final Assignment\ProjectManagementAPI\ProjectManagementAPI\obj\Debug\ProjectManagementAPI.pdb
+C:\Users\Administrator\Documents\Assignments\Final Assignment\ProjectManagementAPI\ProjectManagementAPI\obj\Debug\ProjectManagementAPI.csprojResolveAssemblyReference.cache

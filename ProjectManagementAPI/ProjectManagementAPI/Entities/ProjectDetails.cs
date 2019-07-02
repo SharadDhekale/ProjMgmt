@@ -12,9 +12,8 @@ namespace ProjectManagementAPI.Entities
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public int Priority { get; set; }
-        public int? ManagerId { get; set; }
-        public string ManagerName { get; set; }
         public int NumberOfTasks { get; set; }
         public bool IsCompleted { get; set; }
+        public User Manager { get; set; }
     }
 }

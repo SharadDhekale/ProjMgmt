@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ProjectManagementAPI.Controllers
 {
@@ -49,7 +50,7 @@ namespace ProjectManagementAPI.Controllers
                                              //ProjectId = u.ProjectId,
                                              //TaskId = u.TaskId
 
-                                         }).FirstOrDefault();
+                                         });//.FirstOrDefault();
             if (filteredUser != null)
             {
                 return Ok(filteredUser);
@@ -99,6 +100,7 @@ namespace ProjectManagementAPI.Controllers
         }
         // PUT: api/Users/5
         [ActionName("UpdateUser")]
+        //[EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
         public IHttpActionResult Put(int id, [FromBody]Entities.User user)
         {
             try

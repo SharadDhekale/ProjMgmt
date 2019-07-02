@@ -22,8 +22,14 @@ namespace ProjectManagementAPI.Controllers
                                       Priority = p.Priority ?? 0,
                                       NumberOfTasks = _dbContex.Tasks.Count(x => x.ProjectId == p.ProjectId),
                                       IsCompleted = p.EndDate <= DateTime.Now ? true : false,
-                                      ManagerId=_dbContex.Users.Where(x=>x.ProjectId==p.ProjectId).FirstOrDefault().UserId  ,
-                                      ManagerName= _dbContex.Users.Where(x => x.ProjectId == p.ProjectId).FirstOrDefault().FirstName +" "+ _dbContex.Users.Where(x => x.ProjectId == p.ProjectId).FirstOrDefault().LastName,
+                                      Manager = _dbContex.Users
+                                                       .Where(x => x.ProjectId == p.ProjectId)
+                                                       .Select(m => new Entities.User() {
+                                                                    UserId = m.UserId,
+                                                                    EmployeeId = m.EmployeeId,
+                                                                    FirstName = m.FirstName,
+                                                                    LastName = m.LastName })
+                                                       .FirstOrDefault(),
                                   }).AsQueryable();
 
             if (projectDetails != null)
@@ -33,12 +39,7 @@ namespace ProjectManagementAPI.Controllers
             return NotFound();
 
         }
-
-        private string GetManagerName(int projectId)
-        {
-            var user = _dbContex.Users.Where(x => x.ProjectId == projectId).FirstOrDefault();
-            return user?.FirstName + " " + user?.LastName;
-        }
+         
         // GET api/values/5
         [ActionName("GetProject")]
         public IHttpActionResult Get(int id)
@@ -54,8 +55,48 @@ namespace ProjectManagementAPI.Controllers
                                             Priority = p.Priority ?? 0,
                                             NumberOfTasks = _dbContex.Tasks.Count(x => x.ProjectId == p.ProjectId),
                                             IsCompleted = p.EndDate <= DateTime.Now ? true : false,
-                                            ManagerId = _dbContex.Users.Where(x => x.ProjectId == p.ProjectId).FirstOrDefault().UserId,
-                                            ManagerName = _dbContex.Users.Where(x => x.ProjectId == p.ProjectId).FirstOrDefault().FirstName + " " + _dbContex.Users.Where(x => x.ProjectId == p.ProjectId).FirstOrDefault().LastName,
+                                            Manager = _dbContex.Users
+                                                       .Where(x => x.ProjectId == p.ProjectId)
+                                                       .Select(m => new Entities.User()
+                                                       {
+                                                           UserId = m.UserId,
+                                                           EmployeeId = m.EmployeeId,
+                                                           FirstName = m.FirstName,
+                                                           LastName = m.LastName
+                                                       })
+                                                       .FirstOrDefault(),
+
+                                        });
+            if (filterProject != null)
+            {
+                return Ok(filterProject);
+            }
+            return NotFound();
+        }
+        [ActionName("GetProjectByName")]
+        public IHttpActionResult GetProjectByName(string name)
+        {
+            var filterProject = _dbContex.Projects
+                                         .Where(p => p.ProjectName.ToLower().Contains(name.ToLower()))
+                                        .Select(p => new ProjectDetails()
+                                        {
+                                            ProjectId = p.ProjectId,
+                                            ProjectName = p.ProjectName,
+                                            StartDate = p.StartDate,
+                                            EndDate = p.EndDate,
+                                            Priority = p.Priority ?? 0,
+                                            NumberOfTasks = _dbContex.Tasks.Count(x => x.ProjectId == p.ProjectId),
+                                            IsCompleted = p.EndDate <= DateTime.Now ? true : false,
+                                            Manager = _dbContex.Users
+                                                       .Where(x => x.ProjectId == p.ProjectId)
+                                                       .Select(m => new Entities.User()
+                                                       {
+                                                           UserId = m.UserId,
+                                                           EmployeeId = m.EmployeeId,
+                                                           FirstName = m.FirstName,
+                                                           LastName = m.LastName
+                                                       })
+                                                       .FirstOrDefault(),
 
                                         });
             if (filterProject != null)
@@ -80,7 +121,6 @@ namespace ProjectManagementAPI.Controllers
                 if (!CheckProjectAlreadyExist(proj)) // Check User already exist
                 {
                     _dbContex.Projects.Add(newProj);
-
                     _dbContex.SaveChanges();
                     if (proj.ManagerId != null)
                     {

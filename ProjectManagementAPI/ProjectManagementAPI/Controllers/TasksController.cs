@@ -24,8 +24,8 @@ namespace ProjectManagementAPI.Controllers
                                               //ParentTask = GetTask(0, t.ParentId).Single(x=> new Entities.ProjTask() { }),
                                               TaskName = t.TaskName,
                                               Priority = t.Priority,
-                                              StartDate = t.StartDate.GetValueOrDefault(),
-                                              EndDate = t.EndDate.GetValueOrDefault(),
+                                              StartDate = t.StartDate,
+                                              EndDate = t.EndDate ,
                                           }).AsQueryable();
 
 
@@ -88,6 +88,27 @@ namespace ProjectManagementAPI.Controllers
             return NotFound();
         }
 
+        [ActionName("GetTaskByProjectId")]
+        public IHttpActionResult GetTaskByProjectId(int id)
+        {
+            var filterTask = _dbContex.Tasks
+                                           .Where(t => t.ProjectId == id)
+                                          .Select(t => new Entities.ProjTask()
+                                          {
+                                              TaskId = t.TaskId,
+                                              ParentTaskId = t.ParentId,
+                                              TaskName = t.TaskName,
+                                              Priority = t.Priority,
+                                              StartDate = t.StartDate.GetValueOrDefault(),
+                                              EndDate = t.EndDate.GetValueOrDefault(),
+
+                                          }).AsQueryable();
+            if (filterTask != null)
+            {
+                return Ok(filterTask);
+            }
+            return NotFound();
+        }
         [ActionName("AddTask")]
         public IHttpActionResult Post([FromBody]Entities.ProjTask task)
         {
