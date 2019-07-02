@@ -4,8 +4,9 @@ export class Project{
 
     ProjectID:number;
     ProjectName:string;
-    NoOfTasks:number;
+    NumberOfTasks:number;
     CompletedTasks:number;
+    IsCompleted:boolean;
     StartDate:Date;
     EndDate:Date;
     Priority:number;

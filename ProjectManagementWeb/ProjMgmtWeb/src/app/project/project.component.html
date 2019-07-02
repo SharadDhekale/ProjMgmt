@@ -98,16 +98,16 @@
                     </tr>
                     <tr>
                       <td>
-                        No of Tasks: <span>{{obj.NoOfTasks}}</span>
+                        No of Tasks: <span>{{obj.NumberOfTasks}}</span>
                         <br />
                         <br />
                         Start Date:<span>{{obj.StartDate|date:'yyyy-MM-dd'}}</span>
                       </td>
                       <td>
-                        Completed:<span>{{obj.CompletedTasks}}</span>
+                        IsCompleted: <span>{{obj.IsCompleted}}</span>
                         <br />
                         <br />
-                        End Date:<span>{{obj.EndDate|date:'yyyy-MM-dd'}}</span>
+                        End Date: <span>{{obj.EndDate|date:'yyyy-MM-dd'}}</span>
                       </td>
                       <td></td>
                       <td style="float: right">
@@ -136,7 +136,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body" style="height:500px;overflow-y:auto;">
+        <div class="modal-body" style="height:400px;overflow-y:auto;">
           <div class="container-fluid">
             <div class="row">
               <input type="text" class="form-control" placeholder="Search..." name="txtUsrSrch" id="txtUsrSrch">

@@ -48,7 +48,7 @@ export class ProjectComponent implements OnInit {
           , debounceTime(100)
           , distinctUntilChanged()
           , switchMap((searchTerm) =>
-              this._service.GetProject(searchTerm)
+              this._service.GetProjectByName(searchTerm)
           ))
           .subscribe(c => {
               this.lstprojects = c;

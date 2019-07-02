@@ -17,7 +17,7 @@ export class UserService {
     return this._http.get(this.apiBaseUrl + "GetUserList").pipe(map(res => res));
   }
   GetUser(name: string): Observable<any> {
-    return this._http.get(this.apiBaseUrl + "GetUser?name="+name).pipe(map(res => res));
+    return this._http.get(this.apiBaseUrl + "GetUser/?name="+name).pipe(map(res => res));
   }
 
   AddUser(obj: User): Observable<any> {

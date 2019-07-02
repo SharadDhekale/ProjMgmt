@@ -9,7 +9,7 @@ import { Project } from '../Model/Project';
 })
 export class ProjectService {
 
-  apiBaseUrl: string = "http://localhost:2385/api/Project/";
+  apiBaseUrl: string = "http://localhost:2385/api/Projects/";
 
   constructor(private _http: HttpClient) { }
 
@@ -17,10 +17,13 @@ export class ProjectService {
     return this._http.get(this.apiBaseUrl + "GetProjectList").pipe(map(res => res));
   }
 
-  GetProject(name: string): Observable<any> {
-    return this._http.get(this.apiBaseUrl + "GetProject/"+name).pipe(map(res => res));
+  GetProjectByName(name: string): Observable<any> {
+    return this._http.get(this.apiBaseUrl + "GetProjectByName/?name="+name).pipe(map(res => res));
   }
 
+  GetProject(id: number): Observable<any> {
+    return this._http.get(this.apiBaseUrl + "GetProject/?id="+id).pipe(map(res => res));
+  }
   AddProject(obj: Project): Observable<any> {
     return this._http.post(this.apiBaseUrl + "AddProject", obj).pipe(map(res => res));
   }
@@ -31,4 +34,5 @@ export class ProjectService {
     return this._http.post(this.apiBaseUrl + "DeleteProject", obj).pipe(map(res => res));
   }
 
+  
 }

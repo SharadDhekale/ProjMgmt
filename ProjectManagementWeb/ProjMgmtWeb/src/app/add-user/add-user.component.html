@@ -36,7 +36,7 @@
           <input type="text" id="usrEmpId" name="usrEmpId" #eId="ngModel" [(ngModel)]="usrObj.EmployeeId" style="width:150px;" required/>
           <div style="float:right;width:35%;padding:initial;margin:initial" class="alert alert-danger" *ngIf="eId.touched && !eId.valid">Employee
               ID is required</div>
-              <input type="text" id="usreId" name="usreId" #uId="ngModel" [(ngModel)]="usrObj.UserId">
+              <input type="text" id="usreId" name="usreId" #uId="ngModel" [(ngModel)]="usrObj.UserId" hidden="true">
         </td>
       </tr>
       <tr>

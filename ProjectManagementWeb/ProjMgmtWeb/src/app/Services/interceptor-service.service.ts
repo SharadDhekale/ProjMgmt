@@ -14,7 +14,7 @@ export class HttpHeaderInterceptor implements HttpInterceptor {
         {
           headers: req.headers.set('Content-Type','application/json')
           .append('Access-Control-Allow-Headers', 'Content-Type')
-          .append('Access-Control-Allow-Methods', 'GET')
+          .append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
           .append('Access-Control-Allow-Origin', '*')
         });
     return next.handle(constnewReq);

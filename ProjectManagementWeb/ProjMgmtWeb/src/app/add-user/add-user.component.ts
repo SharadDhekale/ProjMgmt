@@ -22,6 +22,7 @@ export class AddUserComponent implements OnInit, AfterViewInit {
   lstUsers: User[];
   buttonText: string = "";
   searchText: string = "";
+  userId:number;
   constructor(private _userService: UserService, private _router: Router, private _sort: SortPipe) {
     this.getallUser();
     this.buttonText = "Add";
@@ -55,7 +56,7 @@ export class AddUserComponent implements OnInit, AfterViewInit {
     // this.usrObj.LastName = this.lastNm;
     // this.usrObj.EmployeeId = this.empId;
     if ( this.buttonText = "Update"){
-      this._userService.UpdateUser(3,this.usrObj).subscribe(r => {
+      this._userService.UpdateUser(this.usrObj.UserId,this.usrObj).subscribe(r => {
         this.ResponseMsg = r;
         this.getallUser();
       });

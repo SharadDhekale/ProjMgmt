@@ -17,9 +17,12 @@ export class ProjTaskService {
     return this._http.get(this.apiBaseUrl + "GetTasksList").pipe(map(res => res));
   }
   GetTask(Id: number): Observable<any> {
-    return this._http.get(this.apiBaseUrl + "GetTask/"+name).pipe(map(res => res));
+    return this._http.get(this.apiBaseUrl + "GetTask/?id="+name).pipe(map(res => res));
   }
-
+//GetTaskByProjectId
+GetTaskByProjectId(Id: number): Observable<any> {
+  return this._http.get(this.apiBaseUrl + "GetTaskByProjectId/?id="+Id).pipe(map(res => res));
+}
   AddTask(obj: ProjTask): Observable<any> {
     return this._http.post(this.apiBaseUrl + "AddTask", obj).pipe(map(res => res));
   }
