@@ -106,7 +106,7 @@ namespace ProjectManagementAPI.Controllers
             return NotFound();
         }
         [ActionName("AddProject")]
-        public IHttpActionResult Post([FromBody]Entities.Project proj)
+        public IHttpActionResult Post([FromBody]Entities.ProjectDetails proj)
         {
             try
             {
@@ -122,9 +122,9 @@ namespace ProjectManagementAPI.Controllers
                 {
                     _dbContex.Projects.Add(newProj);
                     _dbContex.SaveChanges();
-                    if (proj.ManagerId != null)
+                    if (proj.Manager != null)
                     {
-                        var user = _dbContex.Users.Where(u => u.UserId == proj.ManagerId).FirstOrDefault();
+                        var user = _dbContex.Users.Where(u => u.UserId == proj.Manager.UserId).FirstOrDefault();
                         if (user != null)
                         {
                             user.ProjectId = newProj.ProjectId;
@@ -144,13 +144,13 @@ namespace ProjectManagementAPI.Controllers
             return Ok();
         }
 
-        private bool CheckProjectAlreadyExist(Entities.Project proj)
+        private bool CheckProjectAlreadyExist(Entities.ProjectDetails proj)
         {
             return _dbContex.Projects.Any(p => p.ProjectName.ToLower().Equals(proj.ProjectName.ToLower()));
         }
         // PUT: api/Project/5
         [ActionName("UpdateProject")]
-        public IHttpActionResult Put(int id, [FromBody]Entities.Project proj)
+        public IHttpActionResult Put(int id, [FromBody]Entities.ProjectDetails proj)
         {
             try
             {
@@ -161,9 +161,9 @@ namespace ProjectManagementAPI.Controllers
                     filter.StartDate = proj.StartDate;
                     filter.EndDate = proj.EndDate;
                     filter.Priority = proj.Priority;
-                    if (proj.ManagerId != null)
+                    if (proj.Manager != null)
                     {
-                        var filterMgr = _dbContex.Users.FirstOrDefault(u => u.UserId == proj.ManagerId);
+                        var filterMgr = _dbContex.Users.FirstOrDefault(u => u.UserId == proj.Manager.UserId);
                         if (filterMgr != null)
                         {
                             filterMgr.ProjectId = id;
