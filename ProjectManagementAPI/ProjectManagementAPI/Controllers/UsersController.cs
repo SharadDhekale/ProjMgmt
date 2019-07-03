@@ -24,8 +24,6 @@ namespace ProjectManagementAPI.Controllers
                                         EmployeeId = u.EmployeeId,
                                         FirstName = u.FirstName,
                                         LastName = u.LastName,
-                                        //ProjectId = u.ProjectId,
-                                        //TaskId = u.TaskId
                                     });
             if (userList != null)
             {
@@ -47,9 +45,7 @@ namespace ProjectManagementAPI.Controllers
                                              EmployeeId = u.EmployeeId,
                                              FirstName = u.FirstName,
                                              LastName = u.LastName,
-                                             //ProjectId = u.ProjectId,
-                                             //TaskId = u.TaskId
-
+ 
                                          });//.FirstOrDefault();
             if (filteredUser != null)
             {
