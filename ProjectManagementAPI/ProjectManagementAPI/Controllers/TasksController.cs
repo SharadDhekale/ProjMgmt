@@ -52,8 +52,8 @@ namespace ProjectManagementAPI.Controllers
                                              ParentTaskId = t.ParentId,
                                              TaskName = t.TaskName,
                                              Priority = t.Priority,
-                                             StartDate = t.StartDate.GetValueOrDefault(),
-                                             EndDate = t.EndDate.GetValueOrDefault(),
+                                             StartDate = t.StartDate,
+                                             EndDate = t.EndDate,
 
                                          }).AsQueryable();
             }
@@ -67,8 +67,8 @@ namespace ProjectManagementAPI.Controllers
                                              ParentTaskId = t.ParentId,
                                              TaskName = t.TaskName,
                                              Priority = t.Priority,
-                                             StartDate = t.StartDate.GetValueOrDefault(),
-                                             EndDate = t.EndDate.GetValueOrDefault(),
+                                             StartDate = t.StartDate,
+                                             EndDate = t.EndDate,
 
                                          }).AsQueryable();
             }
@@ -99,8 +99,8 @@ namespace ProjectManagementAPI.Controllers
                                               ParentTaskId = t.ParentId,
                                               TaskName = t.TaskName,
                                               Priority = t.Priority,
-                                              StartDate = t.StartDate.GetValueOrDefault(),
-                                              EndDate = t.EndDate.GetValueOrDefault(),
+                                              StartDate = t.StartDate,
+                                              EndDate = t.EndDate,
 
                                           }).AsQueryable();
             if (filterTask != null)
