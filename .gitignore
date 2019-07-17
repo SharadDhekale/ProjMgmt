@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ProjectManagementAPI/ProjectManagementAPI/obj/Release/edmxResourcesToEmbed/Models
+/ProjectManagementAPI/ProjectManagementAPI/obj/Release
+/ProjectManagementAPI/ProjectManagementAPI/Properties/PublishProfiles
+/ProjectManagementAPI/ProjectManagementAPI.Tests/bin

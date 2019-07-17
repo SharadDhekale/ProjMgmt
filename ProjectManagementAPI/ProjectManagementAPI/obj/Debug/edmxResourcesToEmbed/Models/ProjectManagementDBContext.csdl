@@ -5,7 +5,7 @@
       <PropertyRef Name="ParentId" />
     </Key>
     <Property Name="ParentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ParentTask1" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="ParentTask1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Tasks" Relationship="Self.FK_Task_ParentTask" FromRole="ParentTask" ToRole="Task" />
   </EntityType>
   <EntityType Name="Project">
@@ -27,7 +27,7 @@
     <Property Name="TaskId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ParentId" Type="Int32" />
     <Property Name="ProjectId" Type="Int32" />
-    <Property Name="TaskName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="TaskName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="StartDate" Type="DateTime" Precision="0" />
     <Property Name="EndDate" Type="DateTime" Precision="0" />
     <Property Name="Priority" Type="Int32" />

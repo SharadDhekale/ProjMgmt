@@ -5,7 +5,7 @@
       <PropertyRef Name="ParentId" />
     </Key>
     <Property Name="ParentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ParentTask" Type="nchar" MaxLength="100" />
+    <Property Name="ParentTask" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="Project">
     <Key>
@@ -24,7 +24,7 @@
     <Property Name="TaskId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ParentId" Type="int" />
     <Property Name="ProjectId" Type="int" />
-    <Property Name="TaskName" Type="nchar" MaxLength="100" />
+    <Property Name="TaskName" Type="nvarchar" MaxLength="100" />
     <Property Name="StartDate" Type="date" />
     <Property Name="EndDate" Type="date" />
     <Property Name="Priority" Type="int" />
