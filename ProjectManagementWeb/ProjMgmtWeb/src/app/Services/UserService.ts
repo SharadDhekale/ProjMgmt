@@ -9,7 +9,8 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  apiBaseUrl: string = "http://localhost:2385/api/Users/";
+   apiBaseUrl: string = "http://localhost/ProjectManagementAPI/api/Users/";
+  //apiBaseUrl: string = "http://localhost:49637/api/Users/";
 
   constructor(private _http: HttpClient) { }
 
@@ -23,12 +24,14 @@ export class UserService {
   AddUser(obj: User): Observable<any> {
     return this._http.post(this.apiBaseUrl + "Adduser", obj).pipe(map(res => res));
   }
-  UpdateUser(id:number,obj: User): Observable<any> {
-   
-    return this._http.put(this.apiBaseUrl + "UpdateUser?id="+ id,obj).pipe(map(res => res));
+  UpdateUser(obj: User): Observable<any> {
+   console.log('UpdateUser Service call for'+ obj.UserId);
+   console.log(this.apiBaseUrl + "UpdateUser/?id="+ obj.UserId);
+    return this._http.put(this.apiBaseUrl + "UpdateUser/?id="+ obj.UserId,obj).pipe(map(res => res));
   }
   DeleteUser(obj: User): Observable<any> {
-    return this._http.post(this.apiBaseUrl + "DeleteUser", obj).pipe(map(res => res));
+    console.log(this.apiBaseUrl + "DeleteUser/?id="+ obj.UserId);
+    return this._http.delete(this.apiBaseUrl + "DeleteUser/?id="+ obj.UserId).pipe(map(res => res));
   }
 
 }

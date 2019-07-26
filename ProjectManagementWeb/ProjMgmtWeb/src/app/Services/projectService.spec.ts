@@ -24,10 +24,8 @@ describe('ProjectListTest',()=>{
     let projectlist=null;
   it('should return available Projects List', inject([ProjectService], (service: ProjectService) => {
     expect(service).toBeTruthy();
-    let result = service.GetProjectList().subscribe(pl=>{
-        projectlist=pl;
-    });
-   
+    let result = service.GetProjectList();
+   console.log(result);
   }));
   
 });

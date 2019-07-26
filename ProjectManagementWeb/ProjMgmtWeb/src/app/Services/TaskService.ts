@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ProjTaskService {
 
-  apiBaseUrl: string = "http://localhost:2385/api/Tasks/";
+  apiBaseUrl: string = "http://localhost/ProjectManagementAPI/api/Tasks/";
 
   constructor(private _http: HttpClient) { }
 

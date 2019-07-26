@@ -9,7 +9,7 @@ import { Project } from '../Model/Project';
 })
 export class ProjectService {
 
-  apiBaseUrl: string = "http://localhost:2385/api/Projects/";
+  apiBaseUrl: string = "http://localhost/ProjectManagementAPI/api/Projects/";
 
   constructor(private _http: HttpClient) { }
 

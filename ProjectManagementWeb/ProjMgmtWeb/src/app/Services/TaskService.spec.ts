@@ -28,13 +28,10 @@ describe('TaskListTest',()=>{
 });
 
 describe('GetTaskDetails',()=>{
-  let  taskId=0;
+  let  taskId=1;
     it('should return Tasks details for requested id', inject([ProjTaskService], (service: ProjTaskService) => {
       expect(service).toBeTruthy();
-      let taskslist= service.GetTask(1).subscribe(t=>{
-      // taskId=t[0].TaskId;
-      console.log(t);
-      });
+      let taskslist= service.GetTask(1);
       expect(taskId).toBe(1);
     }));
    

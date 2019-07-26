@@ -55,12 +55,15 @@ export class AddUserComponent implements OnInit, AfterViewInit {
     // this.usrObj.FirstName = this.firstNm;
     // this.usrObj.LastName = this.lastNm;
     // this.usrObj.EmployeeId = this.empId;
-    if ( this.buttonText = "Update"){
-      this._userService.UpdateUser(this.usrObj.UserId,this.usrObj).subscribe(r => {
+    console.log(this.buttonText);
+    if ( this.buttonText === "Update"){
+      console.log('UpdateUser');
+      this._userService.UpdateUser(this.usrObj).subscribe(r => {
         this.ResponseMsg = r;
         this.getallUser();
       });
     }else{
+      console.log('AddUser');
     this._userService.AddUser(this.usrObj).subscribe(r => {
       this.ResponseMsg = r;
       this.getallUser();
