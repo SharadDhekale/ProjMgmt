@@ -232,6 +232,6 @@ C:\Final Assignment\ProjectManagementAPI\ProjectManagementAPI\bin\Microsoft.AI.D
 C:\Final Assignment\ProjectManagementAPI\ProjectManagementAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Final Assignment\ProjectManagementAPI\ProjectManagementAPI\bin\Microsoft.AI.WindowsServer.xml
 C:\Final Assignment\ProjectManagementAPI\ProjectManagementAPI\bin\Microsoft.AI.Web.xml
-C:\Final Assignment\ProjectManagementAPI\ProjectManagementAPI\obj\Debug\ProjectManagementAPI.csprojResolveAssemblyReference.cache
 C:\Final Assignment\ProjectManagementAPI\ProjectManagementAPI\obj\Debug\ProjectManagementAPI.dll
 C:\Final Assignment\ProjectManagementAPI\ProjectManagementAPI\obj\Debug\ProjectManagementAPI.pdb
+C:\Final Assignment\ProjectManagementAPI\ProjectManagementAPI\obj\Debug\ProjectManagementAPI.csprojResolveAssemblyReference.cache
