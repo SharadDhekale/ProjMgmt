@@ -1,0 +1,15 @@
+Re-create the Customersand Orderstables, enhancing their definition with all primary and foreign keys constraints.
+
+2.Using the ALTER TABLE statement, create an integrity constraint that limits the possible values of the quantity column in the Orderstable to values between 1 and 30.
+
+3.With the help of the corresponding system procedures and the Transact-SQL statements CREATE DEFAULT and CREATE RULE, create the alias data type “Western Countries”. The possible values for the new data type are CA(for California), WA( for Washington), OR( for Oregon), and NM( for New Mexico). The default value is CA. Finally, create a table called Regions with the columns City and Country using the new data type for the later.
+
+4.Display all integrity constraints for the Orders table.
+
+5.Delete the primary key of the Customerstable. Why isn’t that working?
+
+6.Delete the integrity constraint defined in Step-2.
+
+7.Write a function that will return the age of the person given his or her date of birth. 
+
+8.Write a procedure that accepts name and data of birth of the student and inserts the data in the student table with the date computed. The SID should be largest sid in the table +1.

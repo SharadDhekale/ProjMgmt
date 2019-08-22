@@ -1,0 +1,6 @@
+C:\Users\Administrator\Documents\Assignments\21 - WCF Assignment\HelloService\JobOpenings\bin\JobOpenings.dll.config
+C:\Users\Administrator\Documents\Assignments\21 - WCF Assignment\HelloService\JobOpenings\bin\JobOpenings.dll
+C:\Users\Administrator\Documents\Assignments\21 - WCF Assignment\HelloService\JobOpenings\bin\JobOpenings.pdb
+C:\Users\Administrator\Documents\Assignments\21 - WCF Assignment\HelloService\JobOpenings\obj\Debug\JobOpenings.dll
+C:\Users\Administrator\Documents\Assignments\21 - WCF Assignment\HelloService\JobOpenings\obj\Debug\JobOpenings.pdb
+C:\Users\Administrator\Documents\Assignments\21 - WCF Assignment\HelloService\JobOpenings\obj\Debug\JobOpenings.csprojResolveAssemblyReference.cache

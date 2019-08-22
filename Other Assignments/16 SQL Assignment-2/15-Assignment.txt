@@ -1,0 +1,51 @@
+1.	Create tables 
+-	Customers
+
+CREATE TABLE [dbo].[Customers](
+	[CustomerId] [char](5) NOT NULL,
+	[CompanyName] [varchar](40) NOT NULL,
+	[ContactName] [char](30) NULL,
+	[Address] [varchar](60) NULL,
+	[City] [char](15) NULL,
+	[Phone] [char](24) NULL,
+	[Fax] [char](24) NULL
+)
+
+-	Orders
+CREATE TABLE [dbo].[Orders](
+	[OrderId] [int] NOT NULL,
+	[CustomerId] [char](5) NOT NULL,
+	[OrderDate] [datetime] NULL,
+	[ShippedDate] [datetime] NULL,
+	[Freight] [money] NULL,
+	[ShipName] [varchar](40) NULL,
+	[ShipAddress] [varchar](60) NULL,
+	[Quantity] [int] NULL
+)
+
+2.	Add new column to Orders table
+Alter table [dbo].[Orders]
+ADD ShipRegion int NULL
+3.	Change column Data type
+ALTER TABLE [dbo].[Orders]
+ALTER COLUMN ShipRegion char(8) NULL
+4.	Drop table column
+ALTER TABLE [dbo].[Orders]
+DROP COLUMN ShipRegion 
+5.	Insert row to the table
+INSERT INTO [dbo].[Orders]
+	    ([OrderId] ,[CustomerId]
+           ,[OrderDate],[ShippedDate]
+           ,[Freight] ,[ShipName]
+           ,[ShipAddress] ,[Quantity])
+
+VALUES ( 10, 'ord01', getdate(), getdate(),
+ 100.0, 'Windstar', 'Ocean',1)
+
+6.	Add default values to existing column.
+ALTER TABLE DBO.ORDERS
+ADD CONSTRAINT df_curDateTime
+DEFAULT getdate() FOR OrderDate
+7.	Rename column 
+SP_RENAME 'dbo.customers.City','Town','COLUMN';
+8.	

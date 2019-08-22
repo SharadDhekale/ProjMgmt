@@ -1,0 +1,139 @@
+﻿@model TwitterClone.Models.TweetsAndPeople
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";    
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<link href="~/Scripts/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+<script>
+    $(document).on("click", ".open-SearchUserDialog", function () {
+        var searchUserIdVal = document.getElementById("schUsr").value;
+        $(".modal-body #searchUserId").val(searchUserIdVal);
+    });
+</script>
+
+<form action="/Twitter/Index" method="post" class="form-group">
+    <div class="jumbotron text-center">
+        <h2>My Twitter Clone</h2>
+        <span>Welcome @Session["FullName"] ! </span><span> | </span><i class="glyphicon glyphicon-home"></i>
+        @Html.ActionLink("Home", "Index", new { user_id = TempData["user_id"].ToString() }) <span> | </span><i class="glyphicon glyphicon-log-out"></i>
+        @Html.ActionLink("Signout", "Login", "Login", null, null)<span> | </span>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <h4>Follow</h4>
+                <div class="input-group">
+                    <input type="text" id="schUsr" class="form-control" placeholder="search...">
+                    <div class="input-group-btn">
+                        <button id="btnSearch" class="open-SearchUserDialog btn btn-default" data-id="" type="submit" data-toggle="modal" data-target="#myModal4">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <br />
+                <button type="button" class="btn btn-success" style="width:150px;">Tweets <span class="badge">@TempData["NO_OF_TWEETS"]</span></button><br>
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal1" style="width:150px;">Following <span class="badge">@TempData["USERS_FOLLOWING"]</span></button><br>
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal2" style="width:150px;">Followers <span class="badge">@TempData["USERS_FOLLOWING_YOU"]</span></button><br>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <h4>What are you doing ?</h4>
+                    <textarea rows="5" cols="100" name="tweetText"></textarea><br /><span style="font-style:italic">Characters left : </span><span id="charleftval" style="font-style:italic"></span>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit" formaction="/Tweet/Create" formmethod="post">Tweet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    @*@Html.Partial("TestTweet")*@
+    <div class="modal fade pull-left" id="myModal1" role="dialog">
+        <div class="modal-dialog pull-left">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Twitter</h4>
+                </div>
+                <div class="modal-body">
+                    <p>You are following...</p>
+                    @Html.Partial("GetTwitterUsers", Model.UsersYouFollow)
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade pull-left" id="myModal2" role="dialog">
+        <div class="modal-dialog pull-left">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Twitter</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Your followers...</p>
+                    @Html.Partial("GetTwitterUsers", Model.UsersFollowYou)
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade pull-left" id="myModal4" role="dialog">
+        <div class="modal-dialog pull-left">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Search User</h4>
+                </div>
+                <div class="modal-body">
+                    <p>show user</p>
+                    <label id="searchUserIdlabel" value="Search User Id:"></label>
+                    <input type="text" name="searchUserId" id="searchUserId" value="" readonly /><br /><br />
+                    <button class="btn btn-primary" type="submit" formaction="/Following/FollowUser" formmethod="post">Follow User</button>                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-8">
+                <div class="form-group">
+                    @Html.Partial("AllTweets", Model.Tweets)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal placeholder-->
+    @*<div id='myModal' class='modal fade in'>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div id='myModalContent'></div>
+                </div>
+            </div>
+        </div>*@
+
+</form>

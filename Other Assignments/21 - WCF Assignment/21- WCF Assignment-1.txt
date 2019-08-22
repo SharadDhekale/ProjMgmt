@@ -1,0 +1,33 @@
+WCF Service Task1
+
+Create a WCF service will implement following methods 
+
+Define OperationContract named SayHello should take name as argument and return the wishes (Good Morning or Good Afternoon or Good Evening) based on time 
+
+Define OperationContractnamed TodayProgram should take name as argument and return the Happy weekend or Enjoy Working day
+
+Define two end point for TCP and HTTP
+
+Use self hosting to host the service Consume the service in ASP.NET MVC 
+
+Design web form with two button 
+First button should invoke using http request 
+Second button should invoke using TCP request
+
+WCF Service Task2, Job Openings
+
+Create a WCF service will implement following methods 
+
+Define OperationContract OpeningJobs return the list of openings
+
+Define OperationContract OpeningJobsByRole return the list of openings on specified role given in the parameter
+
+Host the Serevice in IIS
+Consume the service in ASP.NET MVC
+Design web form with two button 
+First button should invoke using http request
+Second button should invoke using TCP request
+
+2. Create a WCF service to depict simple calculator with addition, subtraction features and deploy  and consume the service 
+
+

@@ -1,0 +1,5 @@
+C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WeatherService\bin\Debug\WeatherService.dll.config
+C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WeatherService\bin\Debug\WeatherService.dll
+C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WeatherService\bin\Debug\WeatherService.pdb
+C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WeatherService\obj\Debug\WeatherService.dll
+C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WeatherService\obj\Debug\WeatherService.pdb

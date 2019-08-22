@@ -1,0 +1,34 @@
+The WebApiAssignmentis titled "Purchase Order Processing System(POPS)".
+The back-end is a small database with four tables containing the details of 
+suppliers, 
+items and 
+purchase orders.
+
+The middle layer will be a Web API which performs the CRUD operations on the database.
+
+Entity framework/Ado.net will be used to access the database.
+
+The front-end is a MVC application which uses C# for server-side code, JavaScript, jQuery, Bootstrap and other JavaScript libraries for client-side code, and Razor as the view engine.
+
+Database:CREATE DATABASE PODbUSE PODb 
+CREATE TABLE SUPPLIER 
+(SUPLNO CHAR(4) PRIMARY KEY,
+SUPLNAME VARCHAR(15) NOT NULL,
+SUPLADDR VARCHAR(40))
+
+CREATE TABLE ITEM 
+(ITCODE CHAR(4) PRIMARY KEY,
+ITDESC VARCHAR(15) NOT NULL,
+ITRATE MONEY)
+
+CREATE TABLE POMASTER 
+(PONO CHAR(4) PRIMARY KEY,
+PODATE DATETIME,
+SUPLNO CHAR(4) 
+REFERENCES SUPPLIER(SUPLNO))
+
+CREATE TABLE PODETAIL 
+
+(PONO CHAR(4) REFERENCES POMASTER(PONO),
+ ITCODE CHAR(4) REFERENCES ITEM(ITCODE),
+ QTY INT,CONSTRAINT POD_PK PRIMARY KEY(PONO, ITCODE))

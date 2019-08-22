@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Calculator" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:2300/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:2300/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICalculator_Addition_InputMessage">
+    <wsdl:part name="parameters" element="tns:Addition" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Addition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Substraction_InputMessage">
+    <wsdl:part name="parameters" element="tns:Substraction" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Substraction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubstractionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Multiplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:Multiplication" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Multiplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultiplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Division_InputMessage">
+    <wsdl:part name="parameters" element="tns:Division" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Division_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DivisionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICalculator">
+    <wsdl:operation name="Addition">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculator/Addition" message="tns:ICalculator_Addition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/AdditionResponse" message="tns:ICalculator_Addition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Substraction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculator/Substraction" message="tns:ICalculator_Substraction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/SubstractionResponse" message="tns:ICalculator_Substraction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Multiplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculator/Multiplication" message="tns:ICalculator_Multiplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/MultiplicationResponse" message="tns:ICalculator_Multiplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Division">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculator/Division" message="tns:ICalculator_Division_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/DivisionResponse" message="tns:ICalculator_Division_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="usingBasicHttp" type="tns:ICalculator">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Addition">
+      <soap:operation soapAction="http://tempuri.org/ICalculator/Addition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Substraction">
+      <soap:operation soapAction="http://tempuri.org/ICalculator/Substraction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiplication">
+      <soap:operation soapAction="http://tempuri.org/ICalculator/Multiplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Division">
+      <soap:operation soapAction="http://tempuri.org/ICalculator/Division" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Calculator">
+    <wsdl:port name="usingBasicHttp" binding="tns:usingBasicHttp">
+      <soap:address location="http://localhost:2300/Calculator" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,15 @@
+Do the Following 
+Tasks1. 
+Create a Git Account using http://www.github.comor  http://172.18.2.18(From VM)
+
+2. Practicefollowing
+
+A.Create your own GIR Repos (Public and Private)
+B.PerformOperations on GIT Repos like commit, push, pullC.Creeate branches and commit to master.
+
+3. Upload Twitter_Clone Application from VS2017 or 2015 to GIT Repo, which you created in Assignment 25(Practice commit, Push and Pull tasks)
+
+4.Upload WCF Service Application from VS2017 or 2015 to GIT Repo, which you created in 
+Assignment 21(Practice commit, Push and Pull tasks)
+
+5. UploadTwitter_Clone Application from VS2017 or 2015 to GIT Repo, which you created in Assignment 23(Practice commit, Push andPull tasks)Note: Upload screen shots of each task to LMS asOutputof thisassignment

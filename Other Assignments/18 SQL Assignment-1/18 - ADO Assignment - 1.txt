@@ -1,0 +1,41 @@
+Q1. Consider a table called ProductDetails having a columns of 
+ProductId, 
+ProductName, 
+SupplierId. 
+Also consider a table called SupplierInfo with columns of 
+SupplierId,
+SupplierName, 
+Address,
+City,DOTNET
+ContactNo,
+Email.
+
+Create a class file that should have the following functions :
+1.Get all records of Product_Details Table
+2.Get all records of SupplierInfo Table. 
+
+Create a MVC application that should display all product and supplier details by using the class created above. Provide link to add/update/delete the Product_details/SupplierInfo table separately.
+
+Q2. Create a web page that should provide a search criteria by Division, Region, Supplier id, Supplier Name, category code. 
+
+Display base the records based on the search criteria given in table format.
+
+The output should have the link on Category Code and direct the user to different  page  when they click on the category code.
+
+In the new page, display the same details in controls which ever is required in editable mode except supplier id and supplier name. So that they can update the details. It should update into database.
+
+Use table called Category with columns category_code,
+category_name,
+division,
+region,
+supplier_id,
+supplier_name.
+
+Note:Use disconnected architecture for above requirement.
+
+Q3.Create a web application  to submit a request of leave approval of an employee.Allow the user to login based on their roles such as employee, manager-If the role is employee, display the total no of leaves available for that employee. And display the leave details including pending approval, approved leaves.Provide link to apply leave. In the page, display the calender control to select From date and Todate. Reason for the leave, and contact no.By selecting the From date and To date, need to calculate the total no of days applied for leave.Once the employee submits, the manager should be able to  see the request of that employee.In Manager home page, Display the no of employees on leave for the current day. Also display pending leave request from the employees.Once he approves the leave of an employee, It should reflect in employee home page.
+
+
+
+
+ &raquo;

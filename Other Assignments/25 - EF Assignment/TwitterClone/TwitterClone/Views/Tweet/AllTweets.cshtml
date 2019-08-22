@@ -1,0 +1,70 @@
+﻿@model IEnumerable<TwitterClone.Models.Tweet>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<script>
+    $(document).on("click", ".open-AddTweetDialog", function () {
+        var mytweetId = $(this).data('id');
+        $(".modal-body #tweetId").val(mytweetId);
+    });
+</script>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <table class="table table-responsive">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.user_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.message)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.created)
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.user_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.message)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.created)
+                </td>
+                <td>
+                    <a class="open-AddTweetDialog btn btn-success" data-id='@item.tweet_id' data-toggle="modal" data-target="#myModal3" style="width:50px;">Edit</a>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.tweet_id }, htmlAttributes: new { @class = "btn btn-info" })
+                </td>
+            </tr>
+        }
+
+    </table>
+    // Edit Tweet Popup
+    <div class="modal fade pull-left" id="myModal3" role="dialog">
+        <div class="modal-dialog pull-left">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Edit Tweet</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Your modal for edit...</p>
+                    <label id="tweetIdlabel" value="Tweet Id:"></label>
+                    <input type="text" name="tweetId" id="tweetId" value="" readonly />
+                    <textarea name="editTweet" id="editTweet" rows="5"></textarea>
+                    <button class="btn btn-primary" type="submit" formaction="/Tweet/Edit" formmethod="post">Edit</button>
+                    @*@Html.RenderAction("Edit","Tweet",new { editFor=})*@
+                    @*@Html.Partial("GetTwitterUsers")*@
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}

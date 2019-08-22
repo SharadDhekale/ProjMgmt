@@ -1,0 +1,6 @@
+C:\Users\Administrator\Documents\Assignments\21 - WCF Assignment\HelloService\CalculatorService\bin\Debug\CalculatorService.dll.config
+C:\Users\Administrator\Documents\Assignments\21 - WCF Assignment\HelloService\CalculatorService\bin\Debug\CalculatorService.dll
+C:\Users\Administrator\Documents\Assignments\21 - WCF Assignment\HelloService\CalculatorService\bin\Debug\CalculatorService.pdb
+C:\Users\Administrator\Documents\Assignments\21 - WCF Assignment\HelloService\CalculatorService\obj\Debug\CalculatorService.dll
+C:\Users\Administrator\Documents\Assignments\21 - WCF Assignment\HelloService\CalculatorService\obj\Debug\CalculatorService.pdb
+C:\Users\Administrator\Documents\Assignments\21 - WCF Assignment\HelloService\CalculatorService\obj\Debug\CalculatorService.csprojResolveAssemblyReference.cache

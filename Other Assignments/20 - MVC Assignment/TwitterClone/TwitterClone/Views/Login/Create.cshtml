@@ -1,0 +1,48 @@
+﻿@model TwitterClone.Models.User
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Join My Twitter Clone</h2>
+
+@using (Html.BeginForm()) 
+{
+<table class="table table-bordered">
+    <tr>
+        <td>@Html.DisplayNameFor(u => u.Username)</td>
+        <td>@Html.EditorFor(u => u.Username)</td>
+        <td>@Html.ValidationMessageFor(u => u.Username)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(u => u.Pwd)</td>
+        <td>@Html.EditorFor(u => u.Pwd)</td>
+        <td>@Html.ValidationMessageFor(u => u.Pwd)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(u => u.Fullname)</td>
+        <td>@Html.EditorFor(u => u.Fullname)</td>
+        <td>@Html.ValidationMessageFor(u => u.Fullname)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(u => u.Useremail)</td>
+        <td>@Html.EditorFor(u => u.Useremail)</td>
+        <td>@Html.ValidationMessageFor(u => u.Useremail)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(u => u.JoinDate)</td>
+        <td>@Html.EditorFor(u => u.JoinDate)</td>
+        <td>@Html.ValidationMessageFor(u => u.JoinDate)</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <input type="submit" value="SignUp" />
+        </td>
+    </tr>
+</table>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

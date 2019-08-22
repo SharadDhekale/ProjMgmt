@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ADOAssignment.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Categories : </h2>
+
+<p>
+    @Html.ActionLink("Add New Category", "Create")
+</p>
+ 
+    <h2>Search By : </h2>
+    @using (Html.BeginForm("Index", "Categories", FormMethod.Get))
+    {
+        @Html.RadioButton("SearchBy", "Division", true)<text>Division </text>
+        @Html.RadioButton("SearchBy", "Supplier_id")<text>Supplier id </text>
+        @Html.RadioButton("SearchBy", "Supplier_Name")<text>Supplier Name </text>
+        @Html.RadioButton("SearchBy", "category_code")<text>Category code</text>
+        <br />
+        @Html.TextBox("txtSearchCriteria")
+        <input type="submit" value="Search" class="btn btn-default" /> <br />
+    <p>
+         <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Category_name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Division)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Region)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SupplierInfo.SupplierName)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Division)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Region)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SupplierInfo.SupplierName)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Category_code }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Category_code }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Category_code })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </p>
+      
+    }
+
+

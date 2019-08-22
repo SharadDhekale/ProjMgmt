@@ -1,0 +1,29 @@
+﻿@model IEnumerable<TwitterClone.Models.FollowingAndFollowers>
+
+<table class="table table-responsive table-striped table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fullname)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fullname)
+        </td>
+        <td>
+            @{
+            if (item.followingType == "YOU_FOLLOW")
+            {
+                @Html.ActionLink("Un-Follow", "UnFollowUser", "Following", new { follower_loginUser = item.follower_id+"|"+item.user_id }, htmlAttributes: new { @class = "btn btn-success" })
+        }
+            }
+            @*@Html.ActionLink("Follow", "Edit", new { id = item.user_id }, htmlAttributes: new { @class = "btn btn-success" })*@
+
+        </td>
+    </tr>
+}
+
+</table>

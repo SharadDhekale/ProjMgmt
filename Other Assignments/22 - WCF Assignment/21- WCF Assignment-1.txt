@@ -1,0 +1,21 @@
+1.WCF Service Task, CRUD operations on database table
+
+Create a WCF service will implement following methods 
+
+Define OperationContract AddEmployee takes employee object and add in employee table
+Define OperationContract RetreiveEmployees return list of employee objects
+Define OperationContract RetreiveEmployeeByID takes id as parameter return list of employee object
+Define OperationContract UpdateEmployee takes employee object and id to edit row in database
+Define OperationContract DeleteEmployee takes employee id as argument and return status of the row delete or not
+Create console application host(selfhosting) the service
+
+Consume the service in ASP.NET MVCDesign web form two perform crud operations
+
+
+2.WCF Service Task, Host in Windows Service
+Create a  WCF Weather service to implement 
+a.Double celciustofarenheit(double temp)
+b.Double farenheittocelcius (double temp)
+Host the service in Windows Service
+
+Consume the service in Console AppDesign web form two perform crud operations

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<TwitterClone.Models.Person>
+
+<h3>Twitter Users</h3>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.fullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.joined)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.active)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.fullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.joined, new { htmlAttributes = new { @class = "form-control datepicker", type = "date" } })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.active)
+        </td>
+        <td>
+            @Html.ActionLink("Follow", "Edit", new { id=item.user_id }) |
+            @Html.ActionLink("Un-Follow", "Details", new { id=item.user_id })
+        </td>
+    </tr>
+}
+
+</table>
+@section Scripts {
+     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    }

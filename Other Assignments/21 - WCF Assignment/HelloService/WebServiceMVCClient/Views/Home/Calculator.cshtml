@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Calculator";
+}
+
+<h2>Calculator</h2>
+
+@using (Html.BeginForm("Calculator", "Home", FormMethod.Get))
+{
+    <table>
+        <thead>
+            <tr>
+                <td>
+                    <text> Enter First Number: </text>
+                </td>
+                <td>
+                    @Html.TextBox("first")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <text> Enter Second Number: </text>
+                </td>
+                <td>
+                    @Html.TextBox("second")
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <b> Select Operator</b>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <text>Addition</text>
+                </td>
+                <td>
+                    @Html.RadioButton("calcOperator", "+")
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <text>Subtraction</text>
+                </td>
+                <td>
+                    @Html.RadioButton("calcOperator", "-")
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <text>Multiplication</text>
+                </td>
+                <td>
+                    @Html.RadioButton("calcOperator", "*")
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <text>Division</text>
+                </td>
+                <td>
+                    @Html.RadioButton("calcOperator", "/")
+                </td>
+            </tr>
+        </tbody>
+    </table>
+     <br />
+    <input type="submit" value="Execute" />
+}
+<hr />
+<div class="row">
+    <b>Result :</b>   @ViewBag.CalcResult
+</div>
+

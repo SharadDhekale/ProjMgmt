@@ -1,0 +1,6 @@
+C:\Users\Administrator\Documents\Assignments\LINQAssignment\LINQAssignment\bin\Debug\LINQAssignment.exe.config
+C:\Users\Administrator\Documents\Assignments\LINQAssignment\LINQAssignment\bin\Debug\LINQAssignment.exe
+C:\Users\Administrator\Documents\Assignments\LINQAssignment\LINQAssignment\bin\Debug\LINQAssignment.pdb
+C:\Users\Administrator\Documents\Assignments\LINQAssignment\LINQAssignment\obj\Debug\LINQAssignment.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Assignments\LINQAssignment\LINQAssignment\obj\Debug\LINQAssignment.exe
+C:\Users\Administrator\Documents\Assignments\LINQAssignment\LINQAssignment\obj\Debug\LINQAssignment.pdb

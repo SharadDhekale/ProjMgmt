@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebServiceMVCClient.JobOpenings.Jobs>
+
+@{
+    ViewBag.Title = "JobList";
+}
+
+<h2>JobList</h2>
+
+<p>
+    @using (Html.BeginForm("JobList", "Home", FormMethod.Get))
+    {
+        <b>Search By Role:</b>
+        @Html.TextBox("role")
+        <input type="submit" value="Search" />
+    }
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Role)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+
+        </tr>
+    }
+
+</table>

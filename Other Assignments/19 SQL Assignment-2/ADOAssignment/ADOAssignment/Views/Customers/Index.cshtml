@@ -1,0 +1,68 @@
+﻿@model IEnumerable<ADOAssignment.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p>
+    @Html.ActionLink("Upload New Customer", "Upload")
+</p>
+<div>
+    <div>
+       <h3>Search By : DOB </h3>
+@using (Html.BeginForm("Index", "Customers", FormMethod.Get))
+{
+          @Html.TextBox("txtSearchCriteria","", new { @type = "date"})
+
+        <input type="submit" value="Search" class="btn btn-default" /> <br />
+}
+        <br />
+    </div>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Custname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DOB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Custname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustAddress)
+                </td>
+                <td>
+                    @DateTime.Parse(Html.DisplayFor(modelItem => item.DOB).ToString()).ToShortDateString()
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salary)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Custid }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Custid }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Custid })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+

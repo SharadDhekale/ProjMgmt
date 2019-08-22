@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DotNetAssignmentsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ProductDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="SupplierId" Type="Int32" />
+    <NavigationProperty Name="SupplierInfo" Relationship="Self.FK_ProductDetails_SupplierInfo" FromRole="ProductDetails" ToRole="SupplierInfo" />
+  </EntityType>
+  <EntityType Name="SupplierInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="SupplierName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ContactNo" Type="Decimal" Precision="12" Scale="0" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProductDetails" Relationship="Self.FK_ProductDetails_SupplierInfo" FromRole="SupplierInfo" ToRole="ProductDetails" />
+    <NavigationProperty Name="Categories" Relationship="DotNetAssignmentsModel.FK_Category_SupplierInfo" FromRole="SupplierInfo" ToRole="Category" />
+  </EntityType>
+  <Association Name="FK_ProductDetails_SupplierInfo">
+    <End Role="SupplierInfo" Type="Self.SupplierInfo" Multiplicity="0..1" />
+    <End Role="ProductDetails" Type="Self.ProductDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupplierInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductDetails">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DotNetAssignmentsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ProductDetails" EntityType="Self.ProductDetail" />
+    <EntitySet Name="SupplierInfoes" EntityType="Self.SupplierInfo" />
+    <AssociationSet Name="FK_ProductDetails_SupplierInfo" Association="Self.FK_ProductDetails_SupplierInfo">
+      <End Role="SupplierInfo" EntitySet="SupplierInfoes" />
+      <End Role="ProductDetails" EntitySet="ProductDetails" />
+    </AssociationSet>
+    <EntitySet Name="Categories" EntityType="DotNetAssignmentsModel.Category" />
+    <AssociationSet Name="FK_Category_SupplierInfo" Association="DotNetAssignmentsModel.FK_Category_SupplierInfo">
+      <End Role="SupplierInfo" EntitySet="SupplierInfoes" />
+      <End Role="Category" EntitySet="Categories" />
+    </AssociationSet>
+    <EntitySet Name="Customers" EntityType="DotNetAssignmentsModel.Customer" />
+    <FunctionImport Name="GetCustomerById" ReturnType="Collection(DotNetAssignmentsModel.GetCustomerById_Result)">
+      <Parameter Name="CustId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertCustomer">
+      <Parameter Name="Custid" Mode="In" Type="Int32" />
+      <Parameter Name="Custname" Mode="In" Type="String" />
+      <Parameter Name="CustAddress" Mode="In" Type="String" />
+      <Parameter Name="Dob" Mode="In" Type="DateTime" />
+      <Parameter Name="salary" Mode="In" Type="Decimal" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Category_code" />
+    </Key>
+    <Property Name="Category_code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Category_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Division" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Region" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="supplier_id" Type="Int32" />
+    <NavigationProperty Name="SupplierInfo" Relationship="DotNetAssignmentsModel.FK_Category_SupplierInfo" FromRole="Category" ToRole="SupplierInfo" />
+  </EntityType>
+  <Association Name="FK_Category_SupplierInfo">
+    <End Type="DotNetAssignmentsModel.SupplierInfo" Role="SupplierInfo" Multiplicity="0..1" />
+    <End Type="DotNetAssignmentsModel.Category" Role="Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupplierInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Category">
+        <PropertyRef Name="supplier_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Custid" />
+    </Key>
+    <Property Name="Custid" Type="Int32" Nullable="false" />
+    <Property Name="Custname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DOB" Type="DateTime" Precision="0" />
+    <Property Name="Salary" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <ComplexType Name="GetCustomerById_Result">
+    <Property Type="Int32" Name="Custid" Nullable="false" />
+    <Property Type="String" Name="Custname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CustAddress" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="DOB" Nullable="true" />
+    <Property Type="Decimal" Name="Salary" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+</Schema>

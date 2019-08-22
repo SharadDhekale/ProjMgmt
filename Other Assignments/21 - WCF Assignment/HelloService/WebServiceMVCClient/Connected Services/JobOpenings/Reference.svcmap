@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="11b44528-4670-453b-8659-01209592e05c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54947/JobOpenings.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="JobOpenings.xsd" MetadataType="Schema" ID="443798e3-4ee0-4112-a77c-7a05a4e3d709" SourceId="1" SourceUrl="http://localhost:54947/JobOpenings.svc?xsd=xsd0" />
+    <MetadataFile FileName="JobOpenings1.xsd" MetadataType="Schema" ID="3ee1d601-66ad-484c-a842-03e3a4390b4e" SourceId="1" SourceUrl="http://localhost:54947/JobOpenings.svc?xsd=xsd1" />
+    <MetadataFile FileName="JobOpenings.disco" MetadataType="Disco" ID="34a709b9-96df-45b1-8945-e14e32389224" SourceId="1" SourceUrl="http://localhost:54947/JobOpenings.svc?disco" />
+    <MetadataFile FileName="JobOpenings2.xsd" MetadataType="Schema" ID="c6d85fea-5db4-4527-8876-8cc29b906ef0" SourceId="1" SourceUrl="http://localhost:54947/JobOpenings.svc?xsd=xsd2" />
+    <MetadataFile FileName="JobOpenings.wsdl" MetadataType="Wsdl" ID="9444d1d9-1ed6-4d78-b0a7-cb9b71fcee43" SourceId="1" SourceUrl="http://localhost:54947/JobOpenings.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

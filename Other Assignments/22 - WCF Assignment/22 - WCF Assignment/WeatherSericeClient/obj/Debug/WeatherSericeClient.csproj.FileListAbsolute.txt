@@ -1,0 +1,6 @@
+C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WeatherSericeClient\bin\Debug\WeatherSericeClient.exe.config
+C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WeatherSericeClient\bin\Debug\WeatherSericeClient.exe
+C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WeatherSericeClient\bin\Debug\WeatherSericeClient.pdb
+C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WeatherSericeClient\obj\Debug\WeatherSericeClient.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WeatherSericeClient\obj\Debug\WeatherSericeClient.exe
+C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WeatherSericeClient\obj\Debug\WeatherSericeClient.pdb

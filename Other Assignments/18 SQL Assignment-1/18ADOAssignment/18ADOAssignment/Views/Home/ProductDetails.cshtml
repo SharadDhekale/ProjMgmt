@@ -1,0 +1,34 @@
+﻿@model List<_18ADOAssignment.Models.ProductDetails>
+
+@{
+    ViewBag.Title = "ProductDetails";
+}
+
+<h2>Product Details</h2>
+<div>
+    <table id="tblProducts" class="table-bordered" style="width:50%">
+        <thead>
+            <tr>
+                <td>Product Id</td>
+                <td>Product Name</td>
+                <td>Supplier Id</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            @{
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.ProductId</td>
+                            <td>@item.ProductName</td>
+                            <td>@item.SupplierId</td>
+                        </tr>
+                }
+            }
+
+
+        </tbody>
+
+    </table>
+</div>

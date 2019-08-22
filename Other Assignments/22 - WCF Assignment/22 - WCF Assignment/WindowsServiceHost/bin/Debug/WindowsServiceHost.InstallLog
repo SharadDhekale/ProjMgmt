@@ -1,0 +1,15 @@
+﻿Installing assembly 'C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WindowsServiceHost\bin\Debug\WindowsServiceHost.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WindowsServiceHost\bin\Debug\WindowsServiceHost.InstallLog
+   assemblypath = C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WindowsServiceHost\bin\Debug\WindowsServiceHost.exe
+   logtoconsole = 
+Installing service WatherService...
+Service WatherService has been successfully installed.
+Creating EventLog source WatherService in log Application...
+Committing assembly 'C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WindowsServiceHost\bin\Debug\WindowsServiceHost.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WindowsServiceHost\bin\Debug\WindowsServiceHost.InstallLog
+   assemblypath = C:\Users\Administrator\Documents\Assignments\22 - WCF Assignment\EmployeeService\WindowsServiceHost\bin\Debug\WindowsServiceHost.exe
+   logtoconsole = 

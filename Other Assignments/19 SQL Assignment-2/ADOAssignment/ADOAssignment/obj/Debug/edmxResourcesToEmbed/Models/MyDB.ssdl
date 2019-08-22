@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DotNetAssignmentsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Category_code" />
+    </Key>
+    <Property Name="Category_code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Category_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Division" Type="nvarchar" MaxLength="10" />
+    <Property Name="Region" Type="nvarchar" MaxLength="20" />
+    <Property Name="supplier_id" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DotNetAssignments.dbo.Customers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="Custid" />
+    </Key>
+    <Property Name="Custid" Type="int" Nullable="false" />
+    <Property Name="Custname" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="Salary" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="ProductDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="25" />
+    <Property Name="SupplierId" Type="int" />
+  </EntityType>
+  <EntityType Name="SupplierInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="SupplierName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="City" Type="nvarchar" MaxLength="20" />
+    <Property Name="ContactNo" Type="numeric" Precision="12" Scale="0" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Category_SupplierInfo">
+    <End Role="SupplierInfo" Type="Self.SupplierInfo" Multiplicity="0..1" />
+    <End Role="Category" Type="Self.Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupplierInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Category">
+        <PropertyRef Name="supplier_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductDetails_SupplierInfo">
+    <End Role="SupplierInfo" Type="Self.SupplierInfo" Multiplicity="0..1" />
+    <End Role="ProductDetails" Type="Self.ProductDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupplierInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductDetails">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="GetCustomerById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CustId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetMyAge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="DOB" Type="date" Mode="In" />
+  </Function>
+  <Function Name="InsertCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Custid" Type="int" Mode="In" />
+    <Parameter Name="Custname" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="Dob" Type="date" Mode="In" />
+    <Parameter Name="salary" Type="decimal" Mode="In" />
+  </Function>
+  <EntityContainer Name="DotNetAssignmentsModelStoreContainer">
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductDetails" EntityType="Self.ProductDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SupplierInfo" EntityType="Self.SupplierInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Customers].[Custid] AS [Custid], 
+    [Customers].[Custname] AS [Custname], 
+    [Customers].[CustAddress] AS [CustAddress], 
+    [Customers].[DOB] AS [DOB], 
+    [Customers].[Salary] AS [Salary]
+    FROM [dbo].[Customers] AS [Customers]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Category_SupplierInfo" Association="Self.FK_Category_SupplierInfo">
+      <End Role="SupplierInfo" EntitySet="SupplierInfo" />
+      <End Role="Category" EntitySet="Category" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductDetails_SupplierInfo" Association="Self.FK_ProductDetails_SupplierInfo">
+      <End Role="SupplierInfo" EntitySet="SupplierInfo" />
+      <End Role="ProductDetails" EntitySet="ProductDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

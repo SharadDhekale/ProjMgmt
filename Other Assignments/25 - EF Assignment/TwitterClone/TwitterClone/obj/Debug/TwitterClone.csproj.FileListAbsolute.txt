@@ -1,0 +1,136 @@
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\ApplicationInsights.config
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\TwitterClone.dll.config
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\TwitterClone.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\TwitterClone.pdb
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Antlr3.Runtime.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\EntityFramework.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\EntityFramework.SqlServer.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Microsoft.AI.Agent.Intercept.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Microsoft.AI.DependencyCollector.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Microsoft.AI.Web.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Microsoft.AI.WindowsServer.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Microsoft.ApplicationInsights.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Microsoft.Web.Infrastructure.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Newtonsoft.Json.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\System.Web.Helpers.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\System.Web.Mvc.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\System.Web.Optimization.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\System.Web.Razor.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\System.Web.WebPages.Deployment.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\System.Web.WebPages.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\System.Web.WebPages.Razor.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\WebGrease.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\EntityFramework.xml
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\EntityFramework.SqlServer.xml
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\System.Web.Helpers.xml
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\System.Web.Mvc.xml
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\System.Web.Optimization.xml
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\System.Web.Razor.xml
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\System.Web.WebPages.xml
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\System.Web.WebPages.Deployment.xml
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\System.Web.WebPages.Razor.xml
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Antlr3.Runtime.pdb
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Newtonsoft.Json.xml
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Microsoft.ApplicationInsights.xml
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Microsoft.AI.DependencyCollector.xml
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Microsoft.AI.WindowsServer.xml
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\bin\Microsoft.AI.Web.xml
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\obj\Debug\TwitterClone.csproj.CoreCompileInputs.cache
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\obj\Debug\TwitterClone.dll
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\obj\Debug\TwitterClone.pdb
+C:\MyLaptop\Kiran - FSD\TwitterClone\TwitterClone\obj\Debug\TwitterClone.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\ApplicationInsights.config
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\TwitterClone.dll.config
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\TwitterClone.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\TwitterClone.pdb
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Antlr3.Runtime.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\EntityFramework.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.Web.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\System.Web.Helpers.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\System.Web.Mvc.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\System.Web.Optimization.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\System.Web.Razor.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\System.Web.WebPages.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\System.Web.WebPages.Razor.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\WebGrease.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\EntityFramework.xml
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\System.Web.Helpers.xml
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\System.Web.Mvc.xml
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\System.Web.Optimization.xml
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\System.Web.Razor.xml
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\System.Web.WebPages.xml
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\System.Web.WebPages.Razor.xml
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Antlr3.Runtime.pdb
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Newtonsoft.Json.xml
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.Web.xml
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\obj\Debug\TwitterClone.dll
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\obj\Debug\TwitterClone.pdb
+C:\Users\Administrator\Documents\Assignments\20 - MVC Assignment\TwitterClone\TwitterClone\obj\Debug\TwitterClone.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\ApplicationInsights.config
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\TwitterClone.dll.config
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\TwitterClone.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\TwitterClone.pdb
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Antlr3.Runtime.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\EntityFramework.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.Web.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\System.Web.Helpers.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\System.Web.Mvc.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\System.Web.Optimization.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\System.Web.Razor.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\System.Web.WebPages.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\System.Web.WebPages.Razor.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\WebGrease.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\EntityFramework.xml
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\System.Web.Helpers.xml
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\System.Web.Mvc.xml
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\System.Web.Optimization.xml
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\System.Web.Razor.xml
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\System.Web.WebPages.xml
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\System.Web.WebPages.Razor.xml
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Antlr3.Runtime.pdb
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Newtonsoft.Json.xml
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\bin\Microsoft.AI.Web.xml
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\obj\Debug\TwitterClone.dll
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\obj\Debug\TwitterClone.pdb
+C:\Users\Administrator\Documents\Assignments\25 - EF Assignment\TwitterClone\TwitterClone\obj\Debug\TwitterClone.csprojResolveAssemblyReference.cache

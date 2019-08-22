@@ -1,0 +1,68 @@
+﻿@model List<_18ADOAssignment.Models.SupplierInfo>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@*<div class="jumbotron">
+       <h1>ASP.NET 1</h1>
+    </div>*@
+
+<div class="row">
+    <div class="col-md-10">
+        <h2>Supplier Details</h2>
+        <div>
+            <table id="tblSupplierss" class="table-bordered" style="width:80%" >
+                <thead>
+                    <tr>
+                        <td>Supplier ID</td>
+                        <td>Supplier Name</td>
+                        <td>Address</td>
+                        <td>City</td>
+                        <td>Contact No#</td>
+                        <td>Email</td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @{
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.SupplierId</td>
+                                <td>@item.SupplierName</td>
+                                <td>@item.Address</td>
+                                <td>@item.City</td>
+                                <td>@item.ContactNo</td>
+                                <td>@item.Email</td>
+                            </tr>
+                        }
+                    }
+
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    @*<div class="col-md-4">
+            <h2>Product Details</h2>
+            <div>
+                <table id="tblProducts" class="table-bordered">
+                    <thead>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <p><a class="btn btn-default">Learn </a></p>
+        </div>*@
+
+</div>
